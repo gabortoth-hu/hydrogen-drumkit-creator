@@ -9,7 +9,7 @@ import os
 from xmlinstrument import getxmlinstrument
 
 def main(argv):
-    help_text = 'hydrogen-drumkit-creator.py -p <sample dir path> -e <sample file extension>'
+    help_text = 'generate_kit.py -p <sample dir path> -e <sample file extension>'
     sample_path = ''
     sample_ext = ''
     try:
@@ -40,7 +40,7 @@ def main(argv):
     file_list = []
 
     #TODO: check directory existence
-    for sample_file in os.listdir(sample_path):
+    for sample_file in sorted(os.listdir(sample_path)):
         if sample_file.endswith(sample_ext):
             #print samplePath+  sampleFile
             file_list.append(sample_file)

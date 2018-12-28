@@ -41,8 +41,8 @@ def main(argv):
 
     #TODO: check directory existence
     for sample_file in sorted(os.listdir(sample_path)):
-        if sample_file.endswith(sample_ext):
-            #print samplePath+  sampleFile
+        if sample_file.lower().endswith(sample_ext.lower()):
+            #print sample_path+  sample_file
             file_list.append(sample_file)
 
     print getxmlinstrument(sample_path.split('/')[-2], file_list)
